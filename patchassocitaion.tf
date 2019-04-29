@@ -9,7 +9,7 @@ resource "aws_ssm_association" "association" {
     values = ["${var.target_tag_values}"]
   }
 
-  schedule_expression = "00 13 * * *"
+  schedule_expression = "cron(00 13 * * *)"
 
   parameters {
     Operation = "Scan"
