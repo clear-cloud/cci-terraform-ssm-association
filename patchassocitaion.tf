@@ -30,7 +30,7 @@ resource "aws_ssm_association" "applypatchbaseline" {
   schedule_expression = "${var.install_schedule_expression}"
 
   parameters {
-    Operation = "install"
+    Operation = "Install"
   }
 }
 
