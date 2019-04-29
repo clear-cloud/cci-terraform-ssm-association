@@ -13,10 +13,3 @@ resource "aws_ssm_patch_group" "pgcentos" {
   baseline_id = "${aws_ssm_patch_baseline.pbcentos.id}"
   patch_group = "${var.account_id}_${var.environment}_terraform_centos_patch-group"
 }
-
-
-
-
-
-
-
