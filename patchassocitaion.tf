@@ -8,6 +8,7 @@ resource "aws_ssm_association" "example" {
     key    = "InstanceIds"
     values = ["i-04872129d45e67a10"]
  }
-
+ parameters {
   Operation = "Scan"
+ }
 }
