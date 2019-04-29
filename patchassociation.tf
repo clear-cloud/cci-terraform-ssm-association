@@ -3,7 +3,7 @@
 #
 resource "aws_ssm_association" "patchbaseline" {
   name = "AWS-RunPatchBaseline"
-  association_name = "${var.environment}_tf_${var.target_tag_key}_Scan"
+  association_name = "${var.environment}_tf_${var.target_tag_key}_${var.target_tag_values}_Scan"
 
   targets {
     key    = "tag:${var.target_tag_key}"
@@ -22,7 +22,7 @@ resource "aws_ssm_association" "patchbaseline" {
 #
 resource "aws_ssm_association" "applypatchbaseline" {
   name = "AWS-RunPatchBaseline"
-  association_name = "${var.environment}_tf_${var.target_tag_key}_Install"
+  association_name = "${var.environment}_tf_${var.target_tag_key}_${var.target_tag_values}_Install"
 
   targets {
     key    = "tag:${var.target_tag_key}"
