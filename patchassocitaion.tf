@@ -19,8 +19,8 @@ resource "aws_ssm_association" "patchbaseline" {
 #
 # ApplyPatchBaseline
 #
-resource "aws_ssm_association" "patchbaseline" {
-  name = "AWS-RunPatchBaseline"
+/*resource "aws_ssm_association" "applypatchbaseline" {
+  name = "AWS-PatchBaseline"
 
   targets {
     key    = "tag:${var.target_tag_key}"
@@ -33,4 +33,4 @@ resource "aws_ssm_association" "patchbaseline" {
     Operation = "Scan"
   }
 }
-
+*/
