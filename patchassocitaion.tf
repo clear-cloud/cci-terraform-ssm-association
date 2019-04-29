@@ -1,15 +1,16 @@
 #
 # Create the association
 #
-resource "aws_ssm_association" "example" {
+resource "aws_ssm_association" "association" {
   name = "AWS-RunPatchBaseline"
 
   targets {
-    key    = "InstanceIds"
-    values = ["i-04872129d45e67a10"]
+    key    = "tag:${var.target_tag_key}"
+    values = ["${var.target_tag_values}"]
   }
 
   parameters {
     Operation = "Scan"
   }
 }
+
