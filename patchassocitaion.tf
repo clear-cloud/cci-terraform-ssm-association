@@ -20,7 +20,7 @@ resource "aws_ssm_association" "patchbaseline" {
 # ApplyPatchBaseline
 #
 resource "aws_ssm_association" "applypatchbaseline" {
-  name = "AWS-PatchBaseline"
+  name = "AWS-ApplyPatchBaseline"
 
   targets {
     key    = "tag:${var.target_tag_key}"
