@@ -12,7 +12,7 @@ resource "aws_ssm_patch_baseline" "pbrhel" {
 
     patch_filter {
       key    = "CLASSIFICATION"
-      values = ["CriticalUpdates", "SecurityUpdates"]
+      values = ["Security", "Recommended"]
     }
   }
 }
@@ -31,7 +31,7 @@ resource "aws_ssm_patch_baseline" "pbcentos" {
 
     patch_filter {
       key    = "CLASSIFICATION"
-      values = ["CriticalUpdates", "SecurityUpdates"]
+      values = ["Security", "Recommended"]
     }
   }
 }
