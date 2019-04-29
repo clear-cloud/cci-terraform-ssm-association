@@ -19,7 +19,7 @@ resource "aws_ssm_association" "patchbaseline" {
 #
 # ApplyPatchBaseline
 #
-/*resource "aws_ssm_association" "applypatchbaseline" {
+resource "aws_ssm_association" "applypatchbaseline" {
   name = "AWS-PatchBaseline"
 
   targets {
@@ -27,10 +27,10 @@ resource "aws_ssm_association" "patchbaseline" {
     values = ["${var.target_tag_values}"]
   }
 
-  schedule_expression = ""
+  schedule_expression = "${var.install_schedule_expression}"
 
   parameters {
-    Operation = "Scan"
+    Operation = "install"
   }
 }
-*/
+
