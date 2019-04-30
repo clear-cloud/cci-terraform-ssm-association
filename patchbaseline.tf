@@ -2,7 +2,7 @@
 # Patch Baseline for RHEL
 #
 resource "aws_ssm_patch_baseline" "pbrhel" {
-  name = "${var.account_id}_${var.environment}_terraform_rhel_patch-baseline"
+  name = "${var.account_id}_${var.environment}_${var.target_tag_key}_${var.target_tag_values}_tf_rhel_patch-baseline"
 
   operating_system = "REDHAT_ENTERPRISE_LINUX"
 
@@ -21,7 +21,7 @@ resource "aws_ssm_patch_baseline" "pbrhel" {
 # Patch Baseline for CentOSS
 #
 resource "aws_ssm_patch_baseline" "pbcentos" {
-  name = "${var.account_id}_${var.environment}_terraform_centos_patch-baseline"
+  name = "${var.account_id}_${var.environment}_${var.target_tag_key}_${var.target_tag_values}_tf_centos_patch-baseline"
 
   operating_system = "CENTOS"
 
